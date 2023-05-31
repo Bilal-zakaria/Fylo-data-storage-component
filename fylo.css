@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url(images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: hsl(243, 100%, 93%);
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.flyo,
+.box {
+  background-color: hsl(228, 56%, 26%);
+}
+.flyo {
+  width: 300px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  border-radius: 10px 90px 10px 10px;
+  margin-bottom: 130px;
+}
+.flyoLogo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.files {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  margin-top: 44px;
+}
+
+.progressContainer {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 14px;
+  background-color: hsl(229, 57%, 11%);
+  /* background-image: linear-gradient( to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%)); */
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.progress {
+  width: 300px;
+  height: 12px;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  border-radius: 10px;
+  border: 1px solid hsl(229, 57%, 11%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.progress .ball {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.Gb {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.floatSpan {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: black;
+  position: absolute;
+  right: 0;
+  top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.floatSpan::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 32px solid white;
+  border-left: 32px solid transparent;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+.floatSpan > span {
+  font-size: 35px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.floatSpan > p {
+  font-size: 12px;
+  color: grey;
+  font-weight: bold;
+}
+@media screen and (max-width: 375px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    background-image: url(images/bg-mobile.png);
+  }
+
+  .box {
+    margin-top: -90px;
+  }
+  .progress {
+    width: 170px;
+  }
+  .progressContainer {
+    width: 200px;
+  }
+  .floatSpan {
+    top: 50px;
+  }
+  .floatSpan::after {
+    border-top: 32px solid transparent;
+  }
+}
